@@ -44,7 +44,7 @@ cp -v kitty-config/{kitty.config, nord.config} ${USER_HOME}/.config/kitty
 # Vscode setup
 # Install extensions
 echo "Setting up vscode configs.."
-chmod -v 777 ./vscode/extensions
+chmod -v 777 vscode/extensions
 ./vscode/extensions
 
 # Move vscode settings.json 
