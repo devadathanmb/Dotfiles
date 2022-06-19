@@ -37,10 +37,6 @@ apt install unzip -y
 echo "Installing curl.."
 apt install curl -y
 
-# Install wget
-echo "Installing wget.."
-apt install wget -y
-
 # Install htop bpytop
 echo "Installing htop and bpytop.."
 apt install htop bpytop -y
