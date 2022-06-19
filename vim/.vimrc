@@ -59,9 +59,9 @@ set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
   Plug 'preservim/nerdtree'
 
-"  Plug 'arcticicestudio/nord-vim'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-"  Plugin 'dracula/vim', { 'name': 'dracula' }
+"  Plug 'arcticicestudio/nord-vim'
 
   Plug 'dracula/vim', { 'as': 'dracula' }
 
