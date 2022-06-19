@@ -29,6 +29,10 @@ apt install code -y
 echo "Installing git.."
 apt install git -y
 
+# Install unzip
+echo "Installing unzip.."
+apt install unzip -y
+
 # Install curl
 echo "Installing curl.."
 apt install curl -y
