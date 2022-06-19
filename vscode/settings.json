@@ -1,0 +1,6 @@
+{
+    "window.titleBarStyle": "custom",
+    "workbench.colorTheme": "Nord Aurora Darker",
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "workbench.iconTheme": "material-icon-theme"
+}
