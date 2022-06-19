@@ -57,6 +57,9 @@ clear
 echo "Change default terminal.."
 sudo update-alternatives --config x-terminal-emulator
 
+# Remove script download directory
+rm -rf ${download_dir}
+
 # Change fonts and run p10kconfig
 clear
 echo "Close the terminal, change the fonts to nerd fonts and run p10kconfig"
