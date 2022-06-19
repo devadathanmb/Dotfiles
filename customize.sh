@@ -7,10 +7,9 @@ download_dir="${USER_HOME}/Downloads/script-downloads/"
 echo "Installing nerd fonts.."
 git clone "https://github.com/icantcodeanyways/my-fonts.git" ${download_dir}/my-fonts
 sudo cp -v ${download_dir}/my-fonts/*.tff /usr/local/share/fonts
-rm -rf -v ${download_dir}/my-fonts/
 fc-cache -f -v
 
-# Instal oh my zsh
+# Install oh my zsh
 echo "Installing oh-my-zsh.."
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -49,12 +48,12 @@ cp -v vim/.vimrc/ {USER_HOME}/
 
 # Setup terminal theme using Gogh
 clear
-echo "Change terminal colorscheme.."
+echo "Changing terminal colorscheme.."
 bash -c  "$(wget -qO- https://git.io/vQgMr)" 
 
 # Change default terminal
 clear
-echo "Change default terminal.."
+echo "Changing default terminal.."
 sudo update-alternatives --config x-terminal-emulator
 
 # Remove script download directory
