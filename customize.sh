@@ -1,6 +1,9 @@
 #! /bin/bash
 
+# Path to user's Home directory
 USER_HOME=$(getent passwd ${SUDO_USER:-$USER} | cut -d: -f6)
+
+# Path to download directory
 download_dir="${USER_HOME}/Downloads/script-downloads/"
 
 # Install necessary fonts
@@ -30,7 +33,12 @@ sudo chsh -s $(which zsh)
 
 # Set kitty config
 echo "Setting up kitty configs.."
-mkdir -p $USER_HOME/.config/kitty
+sudo ln -s ${USER_HOME}/.local/kitt.app/bin/kitty /usr/bin/kitty
+cp -v ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
+cp -v ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
+sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
+sed -i "s|Exec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
+mkdir -p ${USER_HOME}/.config/kitty
 cp -v kitty-config/{kitty.config, nord.config} ${USER_HOME}/.config/kitty
 
 # Vscode setup
@@ -57,7 +65,7 @@ echo "Changing default terminal.."
 sudo update-alternatives --config x-terminal-emulator
 
 # Remove script download directory
-rm -rf ${download_dir}
+rm -rf -v ${download_dir}
 
 # Change fonts and run p10kconfig
 clear
