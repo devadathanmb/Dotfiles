@@ -63,7 +63,7 @@ bash -c  "$(wget -qO- https://git.io/vQgMr)"
 # Change default terminal
 clear
 echo "Changing default terminal.."
-sudo update-alternatives --config x-terminal-emulator
+sudo update-alternatives --set x-terminal-emulator /usr/bin/kitty
 
 # Remove script download directory
 rm -rf -v ${download_dir}
