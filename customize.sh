@@ -53,6 +53,7 @@ cp -v vscode/settings.json ${USER_HOME}/.config/Code/User
 # Setup vim config
 mkdir -p ${USER_HOME}/.vim
 cp -v vim/.vimrc/ {USER_HOME}/
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Setup terminal theme using Gogh
 clear
