@@ -53,9 +53,9 @@ apt install vlc -y
 echo "Installing gnome tweaks.."
 apt install gnome-tweaks -y
 
-# Install smartmantools
-echo "Installing smartmantools.."
-apt install smartmantools -y
+# Install smartmontools
+echo "Installing smartmontools.."
+apt install smartmontools -y
 
 # Install notepadqq
 echo "Intalling notepadqq.."
