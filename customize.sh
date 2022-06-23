@@ -33,13 +33,13 @@ sudo chsh -s $(which zsh)
 
 # Set kitty config
 echo "Setting up kitty configs.."
-sudo ln -s ${USER_HOME}/.local/kitt.app/bin/kitty /usr/bin/kitty
+sudo ln -s ${USER_HOME}/.local/kitty.app/bin/kitty /usr/bin/kitty
 cp -v ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
 cp -v ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
 sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
 sed -i "s|Exec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
 mkdir -p ${USER_HOME}/.config/kitty
-cp -v kitty-config/{kitty.config,nord.config} ${USER_HOME}/.config/kitty
+cp -v kitty-config/{kitty.conf,nord.conf} ${USER_HOME}/.config/kitty
 
 # Vscode setup
 # Install extensions
